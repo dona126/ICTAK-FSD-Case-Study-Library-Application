@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    
+		<title><%=title%></title>
+    
+    <meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="/css/styles.css" rel="stylesheet">
+  </head>
+  
+<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse navbar-right " role="navigation">
+      <ul class="nav navbar-nav ">
+          <li>
+          
+              <a href="/">Sign Out</a> <!-- linking other ejs files -->
+          
+          </li>
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 ><%=title%>
+          <p class="lead"></p>
+        </h1>
+      </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+ 
+<hr>
+
+
+
+
+<div>
+  <form method ="POST" class="formClass one" action="/addpage/add"  onsubmit=" return titleValidation();">
+  
+    <h1 class="myText">Enter details of the book to be added</h1>
+    <br>
+    <div class="form-group">
+      <input type="text" class="form-control" name="title" id="title"  placeholder="Enter title of the book">
+      <label  id="error1"></label>
+    </div>
+    <div class="form-group">
+       <input type="text" class="form-control" name="author" id="author" placeholder="Enter author of the book">
+       <label id="error2"></label>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="life" id="life" placeholder="Enter life span of the author">
+      <label id="error3"></label>
+   </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="genre" id="genre" placeholder="Enter genre of the book">
+      <label id="error4"></label>
+   </div>
+    <label for="exampleFormControlFile1">Upload title page of the book</label>
+    <input type="file" class="form-control-file" name="image1" id="image1">
+    <br>
+    <label for="exampleFormControlFile1">Upload photo of the author</label>
+    <input type="file" class="form-control-file" name="image2" id="image2">
+    <br>
+  <button id="logIn" type="submit" class="btn btn-primary btn-block ">Add the book</button>
+  <br>
+
+
+</form>
+</div>
+
+
+
+
+
+<div  class="container" id="footer">
+  <div  class="row">
+    <div style="text-align: center;" class="col col-sm-12">
+      
+      <h2>Stay in touch!</h2>
+      <div  class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	     <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	     <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    <a href="#">Library App</a>
+  </div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/addpage.js"></script>
+    
+    
+	</body>
+</html>

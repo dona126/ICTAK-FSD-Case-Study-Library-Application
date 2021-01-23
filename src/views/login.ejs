@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    
+		<title><%=title%></title>
+    
+    <meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="/css/styles.css" rel="stylesheet">
+  </head>
+  
+<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse navbar-right " role="navigation">
+      <ul class="nav navbar-nav ">
+        <%for(i=0;i<nav.length; i++){%>
+
+          <li>
+            <%if(i==2){%>
+              <%i=i+2;}%> 
+                      
+              <a href="<%=nav[i].link%>"><%=nav[i].name%></a> <!-- linking other ejs files -->
+          
+          </li>
+          <%}%>
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+<br>
+<br>
+
+<div class="container">
+
+
+        <form class="formClass one" action="/login/addpage" onsubmit=" return emailValidation();">
+          <h1 class="myText">Log In to add, update and delete details.</h1>
+          <br>
+          <div class="form-group">
+            <input type="email" class="form-control"  id="email"  placeholder="Email address">
+            <label  id="error1"></label>
+          </div>
+          <div class="form-group">
+             <input type="password" class="form-control" id="pwd" placeholder="Password">
+             <label id="error2"></label>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+          </div>
+          <!-- <button id="myButton" class="float-left submit-button" >Home</button> -->
+          <button id="logIn" type="submit" class="btn btn-primary btn-block ">Log In</button>
+          
+          
+          <div class="myText">
+          <h1> </h1>
+          <a href="#" style="text-align: left;">Forgotten password?</a>
+          <br>
+          <br>
+          <a href="#" style="text-align: right;">Don't have an account?</a> 
+          </div>
+        </form> 
+         
+
+</div>
+
+
+
+<div  class="container" id="footer">
+  <div  class="row">
+    <div style="text-align: center;" class="col col-sm-12">
+      
+      <h2>Stay in touch!</h2>
+      <div  class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	     <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	     <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    <a href="#">Library App</a>
+  </div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/login.js"></script>
+	</body>
+</html>
